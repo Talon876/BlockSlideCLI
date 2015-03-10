@@ -14,8 +14,8 @@ namespace BlockSlideCLI
             var assembly = Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(string.Format(LEVEL_RESOURCE, level));
             var streamReader = new StreamReader(stream);
-            var data = streamReader.ReadToEnd();
-            return data.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var levelData = streamReader.ReadToEnd();
+            return levelData.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
