@@ -61,6 +61,7 @@
     <Compile Include="TileType.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Vector2.cs" />
+    <Compile Include="WebLevelDataGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
