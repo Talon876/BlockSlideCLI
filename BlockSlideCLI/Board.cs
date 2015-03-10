@@ -22,7 +22,7 @@ namespace BlockSlideCLI
             mPlayer = player;
             mInputProcessor = new GameInputProcessor();
             mLevel = 1;
-            mLevelBuilder = new CampaignLevelBuilder(new WebLevelDataGenerator());
+            mLevelBuilder = new CampaignLevelBuilder();
             SetupLevel();
         }
 

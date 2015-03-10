@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 
 namespace BlockSlideCLI
 {
@@ -10,7 +11,7 @@ namespace BlockSlideCLI
         public IEnumerable<string> GetLevelData(int level)
         {
             string levelData;
-            using (var webClient = new System.Net.WebClient())
+            using (var webClient = new WebClient())
             {
                 levelData = webClient.DownloadString(string.Format(LEVEL_RESOURCE, level));
             }
