@@ -62,307 +62,108 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Levels\Level1.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level10.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level100.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level11.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level12.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level13.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level14.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level15.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level16.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level17.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level18.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level19.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level2.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level20.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level21.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level22.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level23.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level24.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level25.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level26.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level27.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level28.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level29.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level3.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level30.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level31.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level32.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level33.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level34.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level35.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level36.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level37.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level38.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level39.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level4.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level40.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level41.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level42.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level43.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level44.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level45.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level46.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level47.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level48.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level49.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level5.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level50.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level51.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level52.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level53.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level54.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level55.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level56.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level57.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level58.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level59.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level6.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level60.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level61.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level62.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level63.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level64.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level65.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level66.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level67.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level68.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level69.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level7.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level70.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level71.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level72.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level73.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level74.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level75.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level76.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level77.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level78.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level79.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level8.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level80.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level81.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level82.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level83.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level84.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level85.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level86.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level87.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level88.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level89.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level9.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level90.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level91.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level92.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level93.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level94.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level95.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level96.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level97.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level98.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Levels\Level99.map">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Include="Levels\Level1.map" />
+    <EmbeddedResource Include="Levels\Level10.map" />
+    <EmbeddedResource Include="Levels\Level100.map" />
+    <EmbeddedResource Include="Levels\Level11.map" />
+    <EmbeddedResource Include="Levels\Level12.map" />
+    <EmbeddedResource Include="Levels\Level13.map" />
+    <EmbeddedResource Include="Levels\Level14.map" />
+    <EmbeddedResource Include="Levels\Level15.map" />
+    <EmbeddedResource Include="Levels\Level16.map" />
+    <EmbeddedResource Include="Levels\Level17.map" />
+    <EmbeddedResource Include="Levels\Level18.map" />
+    <EmbeddedResource Include="Levels\Level19.map" />
+    <EmbeddedResource Include="Levels\Level2.map" />
+    <EmbeddedResource Include="Levels\Level20.map" />
+    <EmbeddedResource Include="Levels\Level21.map" />
+    <EmbeddedResource Include="Levels\Level22.map" />
+    <EmbeddedResource Include="Levels\Level23.map" />
+    <EmbeddedResource Include="Levels\Level24.map" />
+    <EmbeddedResource Include="Levels\Level25.map" />
+    <EmbeddedResource Include="Levels\Level26.map" />
+    <EmbeddedResource Include="Levels\Level27.map" />
+    <EmbeddedResource Include="Levels\Level28.map" />
+    <EmbeddedResource Include="Levels\Level29.map" />
+    <EmbeddedResource Include="Levels\Level3.map" />
+    <EmbeddedResource Include="Levels\Level30.map" />
+    <EmbeddedResource Include="Levels\Level31.map" />
+    <EmbeddedResource Include="Levels\Level32.map" />
+    <EmbeddedResource Include="Levels\Level33.map" />
+    <EmbeddedResource Include="Levels\Level34.map" />
+    <EmbeddedResource Include="Levels\Level35.map" />
+    <EmbeddedResource Include="Levels\Level36.map" />
+    <EmbeddedResource Include="Levels\Level37.map" />
+    <EmbeddedResource Include="Levels\Level38.map" />
+    <EmbeddedResource Include="Levels\Level39.map" />
+    <EmbeddedResource Include="Levels\Level4.map" />
+    <EmbeddedResource Include="Levels\Level40.map" />
+    <EmbeddedResource Include="Levels\Level41.map" />
+    <EmbeddedResource Include="Levels\Level42.map" />
+    <EmbeddedResource Include="Levels\Level43.map" />
+    <EmbeddedResource Include="Levels\Level44.map" />
+    <EmbeddedResource Include="Levels\Level45.map" />
+    <EmbeddedResource Include="Levels\Level46.map" />
+    <EmbeddedResource Include="Levels\Level47.map" />
+    <EmbeddedResource Include="Levels\Level48.map" />
+    <EmbeddedResource Include="Levels\Level49.map" />
+    <EmbeddedResource Include="Levels\Level5.map" />
+    <EmbeddedResource Include="Levels\Level50.map" />
+    <EmbeddedResource Include="Levels\Level51.map" />
+    <EmbeddedResource Include="Levels\Level52.map" />
+    <EmbeddedResource Include="Levels\Level53.map" />
+    <EmbeddedResource Include="Levels\Level54.map" />
+    <EmbeddedResource Include="Levels\Level55.map" />
+    <EmbeddedResource Include="Levels\Level56.map" />
+    <EmbeddedResource Include="Levels\Level57.map" />
+    <EmbeddedResource Include="Levels\Level58.map" />
+    <EmbeddedResource Include="Levels\Level59.map" />
+    <EmbeddedResource Include="Levels\Level6.map" />
+    <EmbeddedResource Include="Levels\Level60.map" />
+    <EmbeddedResource Include="Levels\Level61.map" />
+    <EmbeddedResource Include="Levels\Level62.map" />
+    <EmbeddedResource Include="Levels\Level63.map" />
+    <EmbeddedResource Include="Levels\Level64.map" />
+    <EmbeddedResource Include="Levels\Level65.map" />
+    <EmbeddedResource Include="Levels\Level66.map" />
+    <EmbeddedResource Include="Levels\Level67.map" />
+    <EmbeddedResource Include="Levels\Level68.map" />
+    <EmbeddedResource Include="Levels\Level69.map" />
+    <EmbeddedResource Include="Levels\Level7.map" />
+    <EmbeddedResource Include="Levels\Level70.map" />
+    <EmbeddedResource Include="Levels\Level71.map" />
+    <EmbeddedResource Include="Levels\Level72.map" />
+    <EmbeddedResource Include="Levels\Level73.map" />
+    <EmbeddedResource Include="Levels\Level74.map" />
+    <EmbeddedResource Include="Levels\Level75.map" />
+    <EmbeddedResource Include="Levels\Level76.map" />
+    <EmbeddedResource Include="Levels\Level77.map" />
+    <EmbeddedResource Include="Levels\Level78.map" />
+    <EmbeddedResource Include="Levels\Level79.map" />
+    <EmbeddedResource Include="Levels\Level8.map" />
+    <EmbeddedResource Include="Levels\Level80.map" />
+    <EmbeddedResource Include="Levels\Level81.map" />
+    <EmbeddedResource Include="Levels\Level82.map" />
+    <EmbeddedResource Include="Levels\Level83.map" />
+    <EmbeddedResource Include="Levels\Level84.map" />
+    <EmbeddedResource Include="Levels\Level85.map" />
+    <EmbeddedResource Include="Levels\Level86.map" />
+    <EmbeddedResource Include="Levels\Level87.map" />
+    <EmbeddedResource Include="Levels\Level88.map" />
+    <EmbeddedResource Include="Levels\Level89.map" />
+    <EmbeddedResource Include="Levels\Level9.map" />
+    <EmbeddedResource Include="Levels\Level90.map" />
+    <EmbeddedResource Include="Levels\Level91.map" />
+    <EmbeddedResource Include="Levels\Level92.map" />
+    <EmbeddedResource Include="Levels\Level93.map" />
+    <EmbeddedResource Include="Levels\Level94.map" />
+    <EmbeddedResource Include="Levels\Level95.map" />
+    <EmbeddedResource Include="Levels\Level96.map" />
+    <EmbeddedResource Include="Levels\Level97.map" />
+    <EmbeddedResource Include="Levels\Level98.map" />
+    <EmbeddedResource Include="Levels\Level99.map" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
