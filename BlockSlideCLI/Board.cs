@@ -14,14 +14,14 @@ namespace BlockSlideCLI
         private readonly Player mPlayer;
         private readonly GameInputProcessor mInputProcessor;
         private int mLevel;
-        private ILevelBuilder mLevelBuilder;
+        private readonly ILevelBuilder mLevelBuilder;
 
         public Board(Player player)
         {
             mPlayer = player;
             mInputProcessor = new GameInputProcessor();
             mLevel = 1;
-            mLevelBuilder = new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT);
+            mLevelBuilder = new CampaignLevelBuilder();
 
             SetupLevel();
         }

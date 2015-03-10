@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BlockSlideCLI.cs" />
     <Compile Include="Board.cs" />
+    <Compile Include="CampaignLevelBuilder.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="GameInputProcessor.cs" />
