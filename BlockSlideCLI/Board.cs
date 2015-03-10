@@ -10,41 +10,40 @@ namespace BlockSlideCLI
         private const ConsoleColor VISITED_COLOR = ConsoleColor.Yellow;
         private const ConsoleColor START_COLOR = ConsoleColor.Cyan;
         private const ConsoleColor END_COLOR = ConsoleColor.DarkGreen;
-        private const int WIDTH = 18; //18, 78
-        private const int HEIGHT = 10; //10, 24
         private Grid<TileType> mGrid; 
         private readonly Player mPlayer;
         private readonly GameInputProcessor mInputProcessor;
         private int mLevel;
+        private ILevelBuilder mLevelBuilder;
 
         public Board(Player player)
         {
             mPlayer = player;
             mInputProcessor = new GameInputProcessor();
             mLevel = 1;
+            mLevelBuilder = new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT);
 
             SetupLevel();
         }
 
         public void SetupLevel()
         {
-            mGrid = new Grid<TileType>(WIDTH, HEIGHT);
-
-            var random = new Random();
-            for (var x = 0; x < mGrid.Width; x++)
-            {
-                for (var y = 0; y < mGrid.Height; y++)
-                {
-                    var value = random.Next(0, 100);
-                    mGrid.Set(x, y, value < 80 ? TileType.Floor : TileType.Wall);
-                }
-            }
-            var start = Vector2.RandomVector(mGrid.Width, mGrid.Height);
-            var end = Vector2.RandomVector(mGrid.Width, mGrid.Height);
-            mGrid.Set(start, TileType.Start);
-            mGrid.Set(end, TileType.Finish);
-            mPlayer.Location = start;
+            mGrid = mLevelBuilder.CreateLevel(mLevel);
+            mPlayer.Location = FindStart();
             InitialDraw();
+        }
+
+        private Vector2 FindStart()
+        {
+            Vector2 vector = null;
+            mGrid.ForEach((x, y, value) =>
+            {
+                if (value == TileType.Start)
+                {
+                    vector = new Vector2(x, y);
+                }
+            });
+            return vector;
         }
 
         private void InitialDraw()

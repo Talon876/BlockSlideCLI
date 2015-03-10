@@ -1,7 +1,9 @@
-﻿namespace BlockSlideCLI
+﻿using BlockSlideCLI.Engine;
+
+namespace BlockSlideCLI
 {
     public interface ILevelBuilder
     {
-        TileType[,] CreateLevel(int level);
+        Grid<TileType> CreateLevel(int level);
     }
 }
