@@ -6,7 +6,8 @@ namespace BlockSlideCLI
     public class Board
     {
         private const ConsoleColor PLAYER_COLOR = ConsoleColor.Green;
-        private const ConsoleColor WALL_COLOR = ConsoleColor.DarkGray;
+        private const ConsoleColor WALL_COLOR = ConsoleColor.Gray;
+        private const ConsoleColor FLOOR_COLOR = ConsoleColor.DarkGray;
         private const ConsoleColor VISITED_COLOR = ConsoleColor.Yellow;
         private const ConsoleColor START_COLOR = ConsoleColor.Cyan;
         private const ConsoleColor END_COLOR = ConsoleColor.DarkGreen;
@@ -84,8 +85,8 @@ namespace BlockSlideCLI
             switch (mGrid.Get(x, y))
             {
                 case TileType.Floor:
-                    Console.ForegroundColor = WALL_COLOR;
-                    character = ' ';
+                    Console.ForegroundColor = FLOOR_COLOR;
+                    character = '.';
                     break;
                 case TileType.Wall:
                     Console.ForegroundColor = WALL_COLOR;
