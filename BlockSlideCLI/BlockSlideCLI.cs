@@ -15,7 +15,7 @@ namespace BlockSlideCLI
                 keypressed = input.GetInput();
                 if (keypressed == 'r')
                 {
-                    board.Reset();
+                    board.SetupLevel();
                 }
                 board.Step(keypressed);
             } while (keypressed != 'q');

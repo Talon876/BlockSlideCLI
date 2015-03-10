@@ -15,16 +15,18 @@ namespace BlockSlideCLI
         private Grid<TileType> mGrid; 
         private readonly Player mPlayer;
         private readonly GameInputProcessor mInputProcessor;
+        private int mLevel;
 
         public Board(Player player)
         {
-            mInputProcessor = new GameInputProcessor();
-
             mPlayer = player;
-            Reset();
+            mInputProcessor = new GameInputProcessor();
+            mLevel = 1;
+
+            SetupLevel();
         }
 
-        public void Reset()
+        public void SetupLevel()
         {
             mGrid = new Grid<TileType>(WIDTH, HEIGHT);
 
@@ -48,6 +50,7 @@ namespace BlockSlideCLI
         private void InitialDraw()
         {
             Console.Clear();
+            Console.Title = string.Format("BlockSlide - Level {0}", mLevel);
 
             mGrid.ForEach((x, y, value) =>
             {
@@ -114,7 +117,8 @@ namespace BlockSlideCLI
 
             if (mGrid.Get(mPlayer.Location) == TileType.Finish)
             {
-                Reset();
+                mLevel++;
+                SetupLevel();
             }
             Draw();
         }
@@ -138,9 +142,9 @@ namespace BlockSlideCLI
         {
             var source = mPlayer.Location.Clone();
             var destination = source.Clone();
-            var moving = true;
+            var canContinueInDirection = true;
             
-            while (moving)
+            while (canContinueInDirection)
             {
                 if (!IsBlocking(destination + direction))
                 {
@@ -148,7 +152,7 @@ namespace BlockSlideCLI
                 }
                 else
                 {
-                    moving = false;
+                    canContinueInDirection = false;
                 }
             }
             mPlayer.Location = destination;
