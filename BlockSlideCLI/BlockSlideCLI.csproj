@@ -46,9 +46,11 @@
     <Compile Include="CampaignLevelBuilder.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Direction.cs" />
+    <Compile Include="EmbeddedResourceLevelDataGenerator.cs" />
     <Compile Include="GameInputProcessor.cs" />
     <Compile Include="IInputManager.cs" />
     <Compile Include="ILevelBuilder.cs" />
+    <Compile Include="ILevelDataGenerator.cs" />
     <Compile Include="KeyboardInputManager.cs" />
     <Compile Include="Engine\Grid.cs" />
     <Compile Include="Player.cs" />
