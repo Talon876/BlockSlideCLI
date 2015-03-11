@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using BlockSlideCLI.Engine;
 
 namespace BlockSlideCLI
@@ -16,13 +17,17 @@ namespace BlockSlideCLI
         private readonly GameInputProcessor mInputProcessor;
         private int mLevel;
         private readonly ILevelBuilder mLevelBuilder;
+        private readonly ICollection<Vector2> mValidLocations;
 
         public Board(Player player)
         {
             mPlayer = player;
-            mInputProcessor = new GameInputProcessor();
             mLevel = 1;
+
+            mValidLocations = new HashSet<Vector2>();
+            mInputProcessor = new GameInputProcessor();
             mLevelBuilder = new CampaignLevelBuilder();
+
             SetupLevel();
         }
 
@@ -30,7 +35,16 @@ namespace BlockSlideCLI
         {
             mGrid = mLevelBuilder.CreateLevel(mLevel);
             mPlayer.Location = FindStart();
+            BuildValidLocations();
             InitialDraw();
+        }
+
+        private void BuildValidLocations()
+        {
+            mValidLocations.Clear();
+            var validLocationCalculator = new ValidLocationCalculator();
+            var validLocations = validLocationCalculator.BuildValidLocations(FindStart(), GetNeighborInDirection);
+            validLocations.ForEach(mValidLocations.Add);
         }
 
         private Vector2 FindStart()
@@ -84,7 +98,9 @@ namespace BlockSlideCLI
             switch (mGrid.Get(x, y))
             {
                 case TileType.Floor:
-                    Console.ForegroundColor = FLOOR_COLOR;
+                    Console.ForegroundColor = mValidLocations.Contains(new Vector2(x, y))
+                        ? VISITED_COLOR
+                        : FLOOR_COLOR;
                     character = '.';
                     break;
                 case TileType.Wall:
@@ -111,7 +127,7 @@ namespace BlockSlideCLI
             var direction = mInputProcessor.GetDirectionFromInput(input);
             if (direction != null)
             {
-                CalculateNewLocation(direction.Value.ToVector());
+                mPlayer.Location = GetNeighborInDirection(mPlayer.Location.Clone(), direction.Value.ToVector());
             }
 
             if (mGrid.Get(mPlayer.Location) == TileType.Finish)
@@ -136,13 +152,11 @@ namespace BlockSlideCLI
             }
             return blocking;
         }
-
-        private void CalculateNewLocation(Vector2 direction)
+        
+        private Vector2 GetNeighborInDirection(Vector2 start, Vector2 direction)
         {
-            var source = mPlayer.Location.Clone();
-            var destination = source.Clone();
             var canContinueInDirection = true;
-            
+            var destination = start.Clone();
             while (canContinueInDirection)
             {
                 if (!IsBlocking(destination + direction))
@@ -154,7 +168,7 @@ namespace BlockSlideCLI
                     canContinueInDirection = false;
                 }
             }
-            mPlayer.Location = destination;
+            return destination.Clone();
         }
     }
 }

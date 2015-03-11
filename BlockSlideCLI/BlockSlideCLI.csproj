@@ -60,6 +60,7 @@
     <Compile Include="RandomLevelBuilder.cs" />
     <Compile Include="TileType.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="ValidLocationCalculator.cs" />
     <Compile Include="Vector2.cs" />
     <Compile Include="WebLevelDataGenerator.cs" />
   </ItemGroup>
