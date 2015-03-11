@@ -17,6 +17,10 @@ namespace BlockSlideCLI
                 {
                     board.SetupLevel();
                 }
+                if (keypressed == 'n')
+                {
+                    board.NextLevel();
+                }
                 board.Step(keypressed);
             } while (keypressed != 'q');
             

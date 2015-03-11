@@ -9,7 +9,7 @@ namespace BlockSlideCLI
         private const ConsoleColor PLAYER_COLOR = ConsoleColor.Green;
         private const ConsoleColor WALL_COLOR = ConsoleColor.Gray;
         private const ConsoleColor FLOOR_COLOR = ConsoleColor.DarkGray;
-        private const ConsoleColor VISITED_COLOR = ConsoleColor.Yellow;
+        private const ConsoleColor VISITED_COLOR = ConsoleColor.DarkYellow;
         private const ConsoleColor START_COLOR = ConsoleColor.Cyan;
         private const ConsoleColor END_COLOR = ConsoleColor.DarkGreen;
         private Grid<TileType> mGrid; 
@@ -132,8 +132,7 @@ namespace BlockSlideCLI
 
             if (mGrid.Get(mPlayer.Location) == TileType.Finish)
             {
-                mLevel++;
-                SetupLevel();
+                NextLevel();
             }
             Draw();
         }
@@ -169,6 +168,12 @@ namespace BlockSlideCLI
                 }
             }
             return destination.Clone();
+        }
+
+        public void NextLevel()
+        {
+            mLevel++;
+            SetupLevel();
         }
     }
 }

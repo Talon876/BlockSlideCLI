@@ -18,19 +18,19 @@ namespace BlockSlideCLI
         public IEnumerable<Vector2> BuildValidLocations(Vector2 startLocation,
             Func<Vector2, Vector2, Vector2> getNeighborsFunc)
         {
-            var stack = new List<SimpleNode>();
+            var visitedLocations = new List<SimpleNode>();
             var startNode = new SimpleNode(startLocation);
-            stack.Add(startNode);
+            visitedLocations.Add(startNode);
 
-            while (stack.Any(node => !node.Visited))
+            while (visitedLocations.Any(node => !node.Visited))
             {
-                var currentNode = stack.First(node => !node.Visited);
+                var currentNode = visitedLocations.First(node => !node.Visited);
                 mDirections.Select(direction => getNeighborsFunc(currentNode.Location, direction))
-                    .Where(neighbor => !stack.Contains(new SimpleNode(neighbor)))
-                    .ForEach(neighbor => stack.Add(new SimpleNode(neighbor)));
+                    .Where(neighbor => !visitedLocations.Contains(new SimpleNode(neighbor)))
+                    .ForEach(neighbor => visitedLocations.Add(new SimpleNode(neighbor)));
                 currentNode.Visited = true;
             }
-            return stack.ToList().Select(node => node.Location);
+            return visitedLocations.Select(node => node.Location);
         }
 
         private class SimpleNode
