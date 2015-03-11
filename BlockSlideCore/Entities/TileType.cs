@@ -1,4 +1,4 @@
-﻿namespace BlockSlideCLI
+﻿namespace BlockSlideCore.Entities
 {
     public enum TileType
     {

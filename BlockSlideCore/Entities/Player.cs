@@ -1,4 +1,6 @@
-﻿namespace BlockSlideCLI
+﻿using BlockSlideCore.DataStructures;
+
+namespace BlockSlideCLI
 {
     public class Player
     {

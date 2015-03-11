@@ -43,131 +43,25 @@
   <ItemGroup>
     <Compile Include="BlockSlideCLI.cs" />
     <Compile Include="Board.cs" />
-    <Compile Include="CampaignLevelBuilder.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Direction.cs" />
-    <Compile Include="EmbeddedResourceLevelDataGenerator.cs" />
     <Compile Include="GameInputProcessor.cs" />
     <Compile Include="IInputManager.cs" />
-    <Compile Include="ILevelBuilder.cs" />
-    <Compile Include="ILevelDataGenerator.cs" />
     <Compile Include="KeyboardInputManager.cs" />
-    <Compile Include="Engine\Grid.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomInputManager.cs" />
-    <Compile Include="RandomLevelBuilder.cs" />
-    <Compile Include="TileType.cs" />
-    <Compile Include="Utils.cs" />
     <Compile Include="ValidLocationCalculator.cs" />
-    <Compile Include="Vector2.cs" />
-    <Compile Include="WebLevelDataGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EmbeddedResource Include="Levels\Level1.map" />
-    <EmbeddedResource Include="Levels\Level10.map" />
-    <EmbeddedResource Include="Levels\Level100.map" />
-    <EmbeddedResource Include="Levels\Level11.map" />
-    <EmbeddedResource Include="Levels\Level12.map" />
-    <EmbeddedResource Include="Levels\Level13.map" />
-    <EmbeddedResource Include="Levels\Level14.map" />
-    <EmbeddedResource Include="Levels\Level15.map" />
-    <EmbeddedResource Include="Levels\Level16.map" />
-    <EmbeddedResource Include="Levels\Level17.map" />
-    <EmbeddedResource Include="Levels\Level18.map" />
-    <EmbeddedResource Include="Levels\Level19.map" />
-    <EmbeddedResource Include="Levels\Level2.map" />
-    <EmbeddedResource Include="Levels\Level20.map" />
-    <EmbeddedResource Include="Levels\Level21.map" />
-    <EmbeddedResource Include="Levels\Level22.map" />
-    <EmbeddedResource Include="Levels\Level23.map" />
-    <EmbeddedResource Include="Levels\Level24.map" />
-    <EmbeddedResource Include="Levels\Level25.map" />
-    <EmbeddedResource Include="Levels\Level26.map" />
-    <EmbeddedResource Include="Levels\Level27.map" />
-    <EmbeddedResource Include="Levels\Level28.map" />
-    <EmbeddedResource Include="Levels\Level29.map" />
-    <EmbeddedResource Include="Levels\Level3.map" />
-    <EmbeddedResource Include="Levels\Level30.map" />
-    <EmbeddedResource Include="Levels\Level31.map" />
-    <EmbeddedResource Include="Levels\Level32.map" />
-    <EmbeddedResource Include="Levels\Level33.map" />
-    <EmbeddedResource Include="Levels\Level34.map" />
-    <EmbeddedResource Include="Levels\Level35.map" />
-    <EmbeddedResource Include="Levels\Level36.map" />
-    <EmbeddedResource Include="Levels\Level37.map" />
-    <EmbeddedResource Include="Levels\Level38.map" />
-    <EmbeddedResource Include="Levels\Level39.map" />
-    <EmbeddedResource Include="Levels\Level4.map" />
-    <EmbeddedResource Include="Levels\Level40.map" />
-    <EmbeddedResource Include="Levels\Level41.map" />
-    <EmbeddedResource Include="Levels\Level42.map" />
-    <EmbeddedResource Include="Levels\Level43.map" />
-    <EmbeddedResource Include="Levels\Level44.map" />
-    <EmbeddedResource Include="Levels\Level45.map" />
-    <EmbeddedResource Include="Levels\Level46.map" />
-    <EmbeddedResource Include="Levels\Level47.map" />
-    <EmbeddedResource Include="Levels\Level48.map" />
-    <EmbeddedResource Include="Levels\Level49.map" />
-    <EmbeddedResource Include="Levels\Level5.map" />
-    <EmbeddedResource Include="Levels\Level50.map" />
-    <EmbeddedResource Include="Levels\Level51.map" />
-    <EmbeddedResource Include="Levels\Level52.map" />
-    <EmbeddedResource Include="Levels\Level53.map" />
-    <EmbeddedResource Include="Levels\Level54.map" />
-    <EmbeddedResource Include="Levels\Level55.map" />
-    <EmbeddedResource Include="Levels\Level56.map" />
-    <EmbeddedResource Include="Levels\Level57.map" />
-    <EmbeddedResource Include="Levels\Level58.map" />
-    <EmbeddedResource Include="Levels\Level59.map" />
-    <EmbeddedResource Include="Levels\Level6.map" />
-    <EmbeddedResource Include="Levels\Level60.map" />
-    <EmbeddedResource Include="Levels\Level61.map" />
-    <EmbeddedResource Include="Levels\Level62.map" />
-    <EmbeddedResource Include="Levels\Level63.map" />
-    <EmbeddedResource Include="Levels\Level64.map" />
-    <EmbeddedResource Include="Levels\Level65.map" />
-    <EmbeddedResource Include="Levels\Level66.map" />
-    <EmbeddedResource Include="Levels\Level67.map" />
-    <EmbeddedResource Include="Levels\Level68.map" />
-    <EmbeddedResource Include="Levels\Level69.map" />
-    <EmbeddedResource Include="Levels\Level7.map" />
-    <EmbeddedResource Include="Levels\Level70.map" />
-    <EmbeddedResource Include="Levels\Level71.map" />
-    <EmbeddedResource Include="Levels\Level72.map" />
-    <EmbeddedResource Include="Levels\Level73.map" />
-    <EmbeddedResource Include="Levels\Level74.map" />
-    <EmbeddedResource Include="Levels\Level75.map" />
-    <EmbeddedResource Include="Levels\Level76.map" />
-    <EmbeddedResource Include="Levels\Level77.map" />
-    <EmbeddedResource Include="Levels\Level78.map" />
-    <EmbeddedResource Include="Levels\Level79.map" />
-    <EmbeddedResource Include="Levels\Level8.map" />
-    <EmbeddedResource Include="Levels\Level80.map" />
-    <EmbeddedResource Include="Levels\Level81.map" />
-    <EmbeddedResource Include="Levels\Level82.map" />
-    <EmbeddedResource Include="Levels\Level83.map" />
-    <EmbeddedResource Include="Levels\Level84.map" />
-    <EmbeddedResource Include="Levels\Level85.map" />
-    <EmbeddedResource Include="Levels\Level86.map" />
-    <EmbeddedResource Include="Levels\Level87.map" />
-    <EmbeddedResource Include="Levels\Level88.map" />
-    <EmbeddedResource Include="Levels\Level89.map" />
-    <EmbeddedResource Include="Levels\Level9.map" />
-    <EmbeddedResource Include="Levels\Level90.map" />
-    <EmbeddedResource Include="Levels\Level91.map" />
-    <EmbeddedResource Include="Levels\Level92.map" />
-    <EmbeddedResource Include="Levels\Level93.map" />
-    <EmbeddedResource Include="Levels\Level94.map" />
-    <EmbeddedResource Include="Levels\Level95.map" />
-    <EmbeddedResource Include="Levels\Level96.map" />
-    <EmbeddedResource Include="Levels\Level97.map" />
-    <EmbeddedResource Include="Levels\Level98.map" />
-    <EmbeddedResource Include="Levels\Level99.map" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BlockSlideCore\BlockSlideCore.csproj">
+      <Project>{63A2678C-7F92-430A-AE31-E3A9E25D7F12}</Project>
+      <Name>BlockSlideCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

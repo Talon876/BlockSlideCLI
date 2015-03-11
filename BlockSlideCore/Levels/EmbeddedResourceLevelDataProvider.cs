@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Levels
 {
-    public class EmbeddedResourceLevelDataGenerator : ILevelDataGenerator
+    public class EmbeddedResourceLevelDataProvider : ILevelDataProvider
     {
-        private const string LEVEL_RESOURCE = "BlockSlideCLI.Levels.Level{0}.map";
+        private const string LEVEL_RESOURCE = "BlockSlideCore.GameLevelData.Level{0}.map";
 
         public IEnumerable<string> GetLevelData(int level)
         {

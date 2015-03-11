@@ -1,7 +1,8 @@
 ﻿using System;
-using BlockSlideCLI.Engine;
+using BlockSlideCore.DataStructures;
+using BlockSlideCore.Entities;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Levels
 {
     public class RandomLevelBuilder : ILevelBuilder
     {

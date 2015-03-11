@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
-using BlockSlideCLI.Engine;
 
 namespace BlockSlideCLI
 {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Levels
 {
-    public interface ILevelDataGenerator
+    public interface ILevelDataProvider
     {
         IEnumerable<string> GetLevelData(int level);
     }

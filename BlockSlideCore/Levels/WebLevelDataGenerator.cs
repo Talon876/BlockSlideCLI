@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Net;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Levels
 {
-    public class WebLevelDataGenerator : ILevelDataGenerator
+    public class WebLevelDataGenerator : ILevelDataProvider
     {
         private const string LEVEL_RESOURCE = "http://nolat.org/blockslide/levels/Level{0}.map";
 

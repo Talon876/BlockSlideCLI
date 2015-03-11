@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BlockSlideCore.DataStructures;
+using BlockSlideCore.Entities;
+using BlockSlideCore.Utilities;
 
 namespace BlockSlideCLI
 {
     public class ValidLocationCalculator
     {
-
         private readonly List<Vector2> mDirections = new List<Vector2>
         {
             Direction.Up.ToVector(),

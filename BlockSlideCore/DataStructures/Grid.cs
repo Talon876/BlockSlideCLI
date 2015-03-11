@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlockSlideCLI.Engine
+namespace BlockSlideCore.DataStructures
 {
     public class Grid<T>
     {

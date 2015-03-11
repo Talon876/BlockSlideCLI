@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Utilities
 {
-    public static class Utils
+    public static class Utilities
     {
         public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.DataStructures
 {
     public class Vector2
     {

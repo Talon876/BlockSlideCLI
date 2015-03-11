@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using BlockSlideCLI.Engine;
+using BlockSlideCore.DataStructures;
+using BlockSlideCore.Entities;
+using BlockSlideCore.Levels;
+using BlockSlideCore.Utilities;
 
 namespace BlockSlideCLI
 {
