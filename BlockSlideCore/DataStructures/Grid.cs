@@ -9,13 +9,6 @@ namespace BlockSlideCore.DataStructures
         public Grid(int width, int height)
         {
             mBoard = new T[height, width];
-            for (var row = 0; row < mBoard.GetLength(0); row++)
-            {
-                for (var col = 0; col < mBoard.GetLength(1); col++)
-                {
-                    mBoard[row, col] = default(T);
-                }
-            }
         }
 
         public int Width
