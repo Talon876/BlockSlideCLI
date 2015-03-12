@@ -1,6 +1,6 @@
 ﻿using BlockSlideCore.DataStructures;
 
-namespace BlockSlideCLI
+namespace BlockSlideCore.Entities
 {
     public class Player
     {
