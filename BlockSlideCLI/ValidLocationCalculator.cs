@@ -9,25 +9,24 @@ namespace BlockSlideCLI
 {
     public class ValidLocationCalculator
     {
-        private readonly List<Vector2> mDirections = new List<Vector2>
+        private readonly List<Direction> mDirections = new List<Direction>
         {
-            Direction.Up.ToVector(),
-            Direction.Down.ToVector(),
-            Direction.Left.ToVector(),
-            Direction.Right.ToVector(),
+            Direction.Up,
+            Direction.Down,
+            Direction.Left,
+            Direction.Right,
         };
 
-        public IEnumerable<Vector2> BuildValidLocations(Vector2 startLocation,
-            Func<Vector2, Vector2, Vector2> getNeighborsFunc)
+        public IEnumerable<Vector2> BuildValidLocations(Level level)
         {
             var visitedLocations = new List<SimpleNode>();
-            var startNode = new SimpleNode(startLocation);
+            var startNode = new SimpleNode(level.StartLocation);
             visitedLocations.Add(startNode);
 
             while (visitedLocations.Any(node => !node.Visited))
             {
                 var currentNode = visitedLocations.First(node => !node.Visited);
-                mDirections.Select(direction => getNeighborsFunc(currentNode.Location, direction))
+                mDirections.Select(direction => level.MovementCalculator.CalculateNewLocation(level.LevelGrid, currentNode.Location, direction))
                     .Where(neighbor => !visitedLocations.Contains(new SimpleNode(neighbor)))
                     .ForEach(neighbor => visitedLocations.Add(new SimpleNode(neighbor)));
                 currentNode.Visited = true;

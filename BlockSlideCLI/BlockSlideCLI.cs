@@ -6,9 +6,8 @@ namespace BlockSlideCLI
     {
         public void Start()
         {
-            var player = new Player();
             var input = new KeyboardInputManager();
-            var board = new Board(player);
+            var board = new Board(1);
             char keypressed;
             do
             {

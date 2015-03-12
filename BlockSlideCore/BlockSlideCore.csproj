@@ -41,7 +41,10 @@
   <ItemGroup>
     <Compile Include="DataStructures\Grid.cs" />
     <Compile Include="DataStructures\Vector2.cs" />
+    <Compile Include="Engine\MovementCalculator.cs" />
+    <Compile Include="Engine\IMovementCalculator.cs" />
     <Compile Include="Entities\Direction.cs" />
+    <Compile Include="Entities\Level.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\TileType.cs" />
     <Compile Include="Levels\CampaignLevelBuilder.cs" />
