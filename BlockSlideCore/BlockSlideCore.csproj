@@ -41,7 +41,9 @@
   <ItemGroup>
     <Compile Include="DataStructures\Grid.cs" />
     <Compile Include="DataStructures\Node.cs" />
+    <Compile Include="DataStructures\NodeUtilities.cs" />
     <Compile Include="DataStructures\Vector2.cs" />
+    <Compile Include="Engine\GraphBuilder.cs" />
     <Compile Include="Engine\MovementCalculator.cs" />
     <Compile Include="Engine\IMovementCalculator.cs" />
     <Compile Include="Engine\ValidLocationCalculator.cs" />

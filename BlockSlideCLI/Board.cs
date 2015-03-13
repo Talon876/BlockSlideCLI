@@ -43,7 +43,6 @@ namespace BlockSlideCLI
             validLocations.ForEach(mValidLocations.Add);
         }
 
-
         private void InitialDraw()
         {
             Console.Clear();
