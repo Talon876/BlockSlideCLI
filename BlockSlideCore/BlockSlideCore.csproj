@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analysis\DotFileGenerator.cs" />
     <Compile Include="DataStructures\Grid.cs" />
     <Compile Include="DataStructures\Node.cs" />
     <Compile Include="DataStructures\NodeUtilities.cs" />
