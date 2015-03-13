@@ -13,12 +13,14 @@ namespace BlockSlideCLI
         private const ConsoleColor WALL_COLOR = ConsoleColor.Gray;
         private const ConsoleColor FLOOR_COLOR = ConsoleColor.DarkGray;
         private const ConsoleColor VISITED_COLOR = ConsoleColor.DarkYellow;
+        private const ConsoleColor PATH_COLOR = ConsoleColor.Magenta;
         private const ConsoleColor START_COLOR = ConsoleColor.Cyan;
         private const ConsoleColor END_COLOR = ConsoleColor.DarkGreen;
         private Level mLevel;
         private readonly GameInputProcessor mInputProcessor;
         private readonly ICollection<Vector2> mValidLocations;
         private int mLevelNumber;
+
         public Board(int level)
         {
             mLevelNumber = level;
@@ -31,6 +33,7 @@ namespace BlockSlideCLI
         public void SetupLevel()
         {
             mLevel = new Level(mLevelNumber);
+
             BuildValidLocations();
             InitialDraw();
         }
@@ -122,6 +125,12 @@ namespace BlockSlideCLI
         public void NextLevel()
         {
             mLevelNumber++;
+            SetupLevel();
+        }
+
+        public void PreviousLevel()
+        {
+            mLevelNumber--;
             SetupLevel();
         }
     }
