@@ -25,5 +25,18 @@ namespace BlockSlideCore.Utilities
                 action(index, source.ElementAt(index));
             }
         }
+
+        public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source, Random rng)
+        {
+            var elements = source.ToArray();
+            for (var i = elements.Length - 1; i > 0; i--)
+            {
+                var swapIndex = rng.Next(i + 1);
+                var tmp = elements[i];
+                elements[i] = elements[swapIndex];
+                elements[swapIndex] = tmp;
+            }
+            return elements;
+        }
     }
 }
