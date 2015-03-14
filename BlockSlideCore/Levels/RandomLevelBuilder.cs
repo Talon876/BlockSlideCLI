@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
 using BlockSlideCore.DataStructures;
+using BlockSlideCore.Engine;
 using BlockSlideCore.Entities;
+using BlockSlideCore.Utilities;
 
 namespace BlockSlideCore.Levels
 {
@@ -29,7 +32,12 @@ namespace BlockSlideCore.Levels
                 }
             }
             var start = Vector2.RandomVector(grid.Width, grid.Height);
-            var end = Vector2.RandomVector(grid.Width, grid.Height);
+            var validLocationCalculator = new ValidLocationCalculator();
+            var validLocations = validLocationCalculator.BuildValidLocations(grid, start.Clone(), new MovementCalculator());
+            var end = validLocations
+                .Shuffle(new Random())
+                .FirstOrDefault(location => !location.Equals(start));
+
             grid.Set(start, TileType.Start);
             grid.Set(end, TileType.Finish);
             return grid;
