@@ -1,9 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BlockSlideCLI
 {
     public class BlockSlideCLI
     {
+        private Dictionary<char, Action<Board>> keyMappings;
+
+        public BlockSlideCLI()
+        {
+            keyMappings = new Dictionary<char, Action<Board>>
+            {
+                {'r', board => board.SetupLevel()},
+                {'n', board => board.NextLevel()},
+                {'b', board => board.PreviousLevel()},
+                {'h', board => board.ShowBestPath = !board.ShowBestPath},
+                {'p', board => board.ResetPlayerLocation()},
+            };
+        }
+
         public void Start()
         {
             var input = new KeyboardInputManager();
@@ -12,21 +27,15 @@ namespace BlockSlideCLI
             do
             {
                 keypressed = input.GetInput();
-                if (keypressed == 'r')
+
+                if (keyMappings.ContainsKey(keypressed))
                 {
-                    board.SetupLevel();
+                    keyMappings[keypressed](board);
                 }
-                if (keypressed == 'n')
-                {
-                    board.NextLevel();
-                }
-                if (keypressed == 'b')
-                {
-                    board.PreviousLevel();
-                }
+
                 board.Step(keypressed);
             } while (keypressed != 'q');
-            
+
             Console.WriteLine("Goodbye!");
         }
     }
