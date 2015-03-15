@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace BlockSlideCore.DataStructures
 {
@@ -52,6 +55,20 @@ namespace BlockSlideCore.DataStructures
                     action(col, row, mBoard[row, col]);
                 }
             }
+        }
+
+        public void SaveToFile(string filepath, Func<T, string> cellMappFunc )
+        {
+            var outputData = new StringBuilder();
+            for (var row = 0; row < mBoard.GetLength(0); row++)
+            {
+                for (var col = 0; col < mBoard.GetLength(1); col++)
+                {
+                    outputData.Append(cellMappFunc(mBoard[row, col]));
+                }
+                outputData.AppendLine();
+            }
+            File.WriteAllText(filepath, outputData.ToString());
         }
 
     }

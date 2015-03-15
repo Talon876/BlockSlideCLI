@@ -88,5 +88,10 @@ namespace BlockSlideCore.Entities
             mLevelGrid = mLevelBuilder.CreateLevel(LevelNumber);
         }
 
+        public void SaveToFile(string fileLocation)
+        {
+            mLevelGrid.SaveToFile(fileLocation, tile => tile.ToCharacter().ToString());
+        }
+
     }
 }
