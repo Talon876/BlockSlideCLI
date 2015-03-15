@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analysis\DotFileGenerator.cs" />
+    <Compile Include="Analysis\ShortestPathData.cs" />
     <Compile Include="Analysis\ShortestPathFinder.cs" />
     <Compile Include="DataStructures\Grid.cs" />
     <Compile Include="DataStructures\Node.cs" />

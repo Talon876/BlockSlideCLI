@@ -8,7 +8,7 @@ namespace BlockSlideCore.Analysis
     {
         private const int EDGE_DISTANCE = 1;
 
-        public List<Vector2> FindShortestPath(Node<Vector2> graphRootNode, Vector2 start, Vector2 goal)
+        public ShortestPathData CalculateShortestPathInformation(Node<Vector2> graphRootNode, Vector2 start)
         {
             var distance = new Dictionary<Vector2, int>();
             var previous = new Dictionary<Vector2, Vector2>();
@@ -48,20 +48,10 @@ namespace BlockSlideCore.Analysis
                 });
             }
 
-            return ExtractPath(previous, goal);
+            return new ShortestPathData(distance, previous);
         }
 
-        private List<Vector2> ExtractPath(Dictionary<Vector2, Vector2> previous, Vector2 goal)
-        {
-            var path = new Stack<Vector2>();
-            var current = goal;
-            while (previous[current] != null)
-            {
-                path.Push(current);
-                current = previous[current];
-            }
-            return path.ToList();
-        }
+        
 
     }
 

@@ -37,7 +37,7 @@ namespace BlockSlideCLI
 
         public void SetupLevel()
         {
-            mLevel = new Level(mLevelNumber);
+            mLevel = new Level(mLevelNumber, new RandomLevelBuilder(Config.WIDTH*3, Config.HEIGHT*2));
 
             mPlayerMoves = 0;
             BuildValidLocations();
@@ -52,8 +52,8 @@ namespace BlockSlideCLI
             var graphBuilder = new GraphBuilder();
 
             var rootNode = graphBuilder.BuildGraph(mLevel);
-            var shortestPath = shortestPathFinder.FindShortestPath(rootNode, mLevel.StartLocation, mLevel.FinishLocation);
-            shortestPath.ForEach(mBestPath.Add);
+            var shortestPathData = shortestPathFinder.CalculateShortestPathInformation(rootNode, mLevel.StartLocation);
+            shortestPathData.GetPath(mLevel.FinishLocation).ForEach(mBestPath.Add);
         }
 
         private void BuildValidLocations()
