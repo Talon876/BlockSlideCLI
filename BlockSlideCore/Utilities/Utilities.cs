@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using BlockSlideCore.Levels;
 
 namespace BlockSlideCore.Utilities
 {
@@ -37,6 +39,26 @@ namespace BlockSlideCore.Utilities
                 elements[swapIndex] = tmp;
             }
             return elements;
+        }
+
+        public static void ConvertLevels()
+        {
+            Directory.CreateDirectory("TranslatedLevels");
+            var levelDataProvider = new EmbeddedResourceLevelDataProvider();
+            Enumerable.Range(1, 100)
+                .ForEach(level => File.WriteAllLines(string.Format("TranslatedLevels/Level{0}.blks", level),
+                    levelDataProvider.GetLevelData(level)
+                        .Select(line => line.Replace(" ", string.Empty))
+                        .Select(line => new string(line.ToCharArray()
+                            .Select(cell => new Dictionary<char, char>
+                            {
+                                {'0', '.'},
+                                {'1', '#'},
+                                {'2', '@'},
+                                {'3', '$'},
+                            }[cell])
+                            .ToArray()))));
+
         }
     }
 }

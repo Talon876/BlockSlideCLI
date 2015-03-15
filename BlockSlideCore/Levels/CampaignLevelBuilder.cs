@@ -22,8 +22,7 @@ namespace BlockSlideCore.Levels
         {
             var levelData = mLevelDataGenerator.GetLevelData(level)
                 .Select(line =>
-                    line.Trim().Split(' ')
-                        .Select(int.Parse)
+                    line.Trim().ToCharArray()
                         .Select(MapTile))
                 .ToList();
             var levelWidth = levelData.ElementAt(0).Count();
@@ -39,17 +38,17 @@ namespace BlockSlideCore.Levels
             return grid;
         }
 
-        private TileType MapTile(int value)
+        private TileType MapTile(char value)
         {
             switch (value)
             {
-                case 0:
+                case '.':
                     return TileType.Floor;
-                case 1:
+                case '#':
                     return TileType.Wall;
-                case 2:
+                case '@':
                     return TileType.Start;
-                case 3:
+                case '$':
                     return TileType.Finish;
                 default:
                     return TileType.Floor;

@@ -7,7 +7,7 @@ namespace BlockSlideCore.Levels
 {
     public class EmbeddedResourceLevelDataProvider : ILevelDataProvider
     {
-        private const string LEVEL_RESOURCE = "BlockSlideCore.GameLevelData.Level{0}.map";
+        private const string LEVEL_RESOURCE = "BlockSlideCore.GameLevelData.Level{0}.blks";
 
         public IEnumerable<string> GetLevelData(int level)
         {
