@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using BlockSlideCore.Analysis;
 using BlockSlideCore.DataStructures;
 using BlockSlideCore.Engine;
 using BlockSlideCore.Entities;
+using BlockSlideCore.Levels;
 using BlockSlideCore.Utilities;
 
 namespace BlockSlideCLI
@@ -19,12 +21,15 @@ namespace BlockSlideCLI
         private Level mLevel;
         private readonly GameInputProcessor mInputProcessor;
         private readonly ICollection<Vector2> mValidLocations;
+        private readonly ICollection<Vector2> mBestPath; 
         private int mLevelNumber;
+        private int mPlayerMoves;
 
         public Board(int level)
         {
             mLevelNumber = level;
             mValidLocations = new HashSet<Vector2>();
+            mBestPath = new HashSet<Vector2>();
             mInputProcessor = new GameInputProcessor();
 
             SetupLevel();
@@ -34,8 +39,21 @@ namespace BlockSlideCLI
         {
             mLevel = new Level(mLevelNumber);
 
+            mPlayerMoves = 0;
             BuildValidLocations();
+            BuildBestPath();
             InitialDraw();
+        }
+
+        private void BuildBestPath()
+        {
+            mBestPath.Clear();
+            var shortestPathFinder = new ShortestPathFinder();
+            var graphBuilder = new GraphBuilder();
+
+            var rootNode = graphBuilder.BuildGraph(mLevel);
+            var shortestPath = shortestPathFinder.FindShortestPath(rootNode, mLevel.StartLocation, mLevel.FinishLocation);
+            shortestPath.ForEach(mBestPath.Add);
         }
 
         private void BuildValidLocations()
@@ -49,7 +67,7 @@ namespace BlockSlideCLI
         private void InitialDraw()
         {
             Console.Clear();
-            Console.Title = string.Format("BlockSlide - Level {0}", mLevel.LevelNumber);
+            Console.Title = string.Format("BlockSlide - Level {0} - Best Path: {1}", mLevel.LevelNumber, mBestPath.Count);
 
             mLevel.LevelGrid.ForEach((x, y, value) =>
             {
@@ -66,6 +84,7 @@ namespace BlockSlideCLI
 
         private void Draw()
         {
+            Console.Title = string.Format("BlockSlide - Level {0} - Moves: {1}/{2}", mLevel.LevelNumber, mPlayerMoves, mBestPath.Count);
             DrawTile(mLevel.PlayerLocation.PreviousX, mLevel.PlayerLocation.PreviousY);
             DrawPlayer(mLevel.PlayerLocation.X, mLevel.PlayerLocation.Y);
         }
@@ -88,6 +107,10 @@ namespace BlockSlideCLI
                         ? VISITED_COLOR
                         : FLOOR_COLOR;
                     character = '.';
+                    if (mBestPath.Contains(new Vector2(x, y)))
+                    {
+                        Console.ForegroundColor = PATH_COLOR;
+                    }
                     break;
                 case TileType.Wall:
                     Console.ForegroundColor = WALL_COLOR;
@@ -113,7 +136,12 @@ namespace BlockSlideCLI
             var direction = mInputProcessor.GetDirectionFromInput(input);
             if (direction != null)
             {
+                var lastLocation = mLevel.PlayerLocation.Clone();
                 var newLocation = mLevel.Move(direction.Value);
+                if (!lastLocation.Equals(newLocation))
+                {
+                    mPlayerMoves++;
+                }
                 if (mLevel.FinishLocation.Equals(newLocation))
                 {
                     NextLevel();

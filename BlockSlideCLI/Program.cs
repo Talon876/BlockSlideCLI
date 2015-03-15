@@ -10,7 +10,6 @@ namespace BlockSlideCLI
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to BlockSlide!");
-//            GenerateDotFiles();
             var blockslide = new BlockSlideCLI();
             blockslide.Start();
 
