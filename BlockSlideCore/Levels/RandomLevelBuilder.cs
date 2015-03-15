@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using BlockSlideCore.Analysis;
 using BlockSlideCore.DataStructures;
@@ -38,16 +40,28 @@ namespace BlockSlideCore.Levels
                     grid.Set(x, y, value < 80 ? TileType.Floor : TileType.Wall);
                 }
             }
-            var start = Vector2.RandomVector(grid.Width, grid.Height);
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
 
             var graphBuilder = new GraphBuilder();
-            var graphRootNode = graphBuilder.BuildGraph(grid, start.Clone(), mMovementCalculator);
             var shortestPathFinder = new ShortestPathFinder();
-            var shortestPathData = shortestPathFinder.CalculateShortestPathInformation(graphRootNode, start.Clone());
-            var end = shortestPathData.DistanceMap.OrderByDescending(entry => entry.Value).FirstOrDefault().Key;
+            var startEndPairs = new Dictionary<Tuple<Vector2, Vector2>, int>();
 
-            grid.Set(start, TileType.Start);
-            grid.Set(end, TileType.Finish);
+            grid.ForEach((x, y, value) =>
+            {
+                var start = new Vector2(x, y);
+                var graphRootNode = graphBuilder.BuildGraph(grid, start.Clone(), mMovementCalculator);
+                var shortestPathData = shortestPathFinder.CalculateShortestPathInformation(graphRootNode, start.Clone());
+                var end = shortestPathData.DistanceMap.OrderByDescending(entry => entry.Value).FirstOrDefault().Key;
+                startEndPairs[new Tuple<Vector2, Vector2>(start, end)] = shortestPathData.DistanceMap[end];
+            });
+
+            var bestStartEndPair = startEndPairs.OrderByDescending(entry => entry.Value).First().Key;
+
+            stopwatch.Stop();
+            Debug.WriteLine("Took {0}ms to select start and end locations.", stopwatch.ElapsedMilliseconds);
+            grid.Set(bestStartEndPair.Item1, TileType.Start);
+            grid.Set(bestStartEndPair.Item2, TileType.Finish);
             return grid;
         }
     }

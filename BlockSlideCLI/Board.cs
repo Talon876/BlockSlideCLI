@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using BlockSlideCore.Analysis;
 using BlockSlideCore.DataStructures;
 using BlockSlideCore.Engine;
@@ -37,7 +39,17 @@ namespace BlockSlideCLI
 
         public void SetupLevel()
         {
-            mLevel = new Level(mLevelNumber, new RandomLevelBuilder(Config.WIDTH*3, Config.HEIGHT*2));
+            var stopwatch = new Stopwatch();
+            Console.WriteLine("Generating level... please wait");
+            var randomLevelNumber = new Random().Next(500) + 100;
+            stopwatch.Start();
+            mLevel = new Level(randomLevelNumber, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
+            stopwatch.Stop();
+            Debug.WriteLine("Took {0}ms (~{1} min) to generate the level.",
+                stopwatch.ElapsedMilliseconds,
+                stopwatch.Elapsed.TotalMinutes);
+            Directory.CreateDirectory("RandomLevels");
+            mLevel.SaveToFile(string.Format("{0}/RandomLevel{1}.blks", "RandomLevels", randomLevelNumber));
 
             mPlayerMoves = 0;
             BuildValidLocations();
