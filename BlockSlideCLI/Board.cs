@@ -26,6 +26,7 @@ namespace BlockSlideCLI
         private readonly ICollection<Vector2> mBestPath; 
         private int mLevelNumber;
         private int mPlayerMoves;
+        private bool mShowBestPath;
 
         public Board(int level)
         {
@@ -41,7 +42,7 @@ namespace BlockSlideCLI
         {
             var stopwatch = new Stopwatch();
             Console.WriteLine("Generating level... please wait");
-            var randomLevelNumber = new Random().Next(500) + 100;
+            var randomLevelNumber = new Random().Next(5000) + 100;
             stopwatch.Start();
             mLevel = new Level(randomLevelNumber, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
             stopwatch.Stop();
@@ -119,7 +120,7 @@ namespace BlockSlideCLI
                         ? VISITED_COLOR
                         : FLOOR_COLOR;
                     character = '.';
-                    if (mBestPath.Contains(new Vector2(x, y)))
+                    if (ShowBestPath && mBestPath.Contains(new Vector2(x, y)))
                     {
                         Console.ForegroundColor = PATH_COLOR;
                     }
@@ -172,6 +173,21 @@ namespace BlockSlideCLI
         {
             mLevelNumber--;
             SetupLevel();
+        }
+
+        public bool ShowBestPath
+        {
+            get { return mShowBestPath; }
+            set
+            {
+                mShowBestPath = value;
+                InitialDraw();
+            }
+        }
+
+        public void ResetPlayerLocation()
+        {
+            mLevel.ResetPlayerLocation();
         }
     }
 }
