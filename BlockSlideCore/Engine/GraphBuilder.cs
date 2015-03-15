@@ -18,30 +18,42 @@ namespace BlockSlideCore.Engine
 
         public Node<Vector2> BuildGraph(Level level)
         {
+            return BuildGraph(level.LevelGrid, level.StartLocation, level.MovementCalculator);
+        }
+
+        public Node<Vector2> BuildGraph(Grid<TileType> grid, Vector2 startLocation, IMovementCalculator movementCalculator)
+        {
             var validLocationCalculator = new ValidLocationCalculator();
-            var validLocations = validLocationCalculator.BuildValidLocations(level).ToList();
+            var validLocations =
+                validLocationCalculator.BuildValidLocations(grid, startLocation, movementCalculator).ToList();
             var validNodes = validLocations.Select(location => new Node<Vector2>(location)).ToList();
 
             validNodes.ForEach(currentNode =>
             {
-                var neighbors = GetAllNeighbors(level, currentNode.Value)
+                var neighbors = GetAllNeighbors(grid, movementCalculator, currentNode.Value)
                     .Select(neighborLocation =>
                         validNodes.FirstOrDefault(node => node.Value.Equals(neighborLocation)))
                     .ToList();
                 neighbors.ForEach(currentNode.Neighbors.Add);
             });
-            var rootNode = validNodes.FirstOrDefault(node => node.Value.Equals(level.StartLocation));
+            var rootNode = validNodes.FirstOrDefault(node => node.Value.Equals(startLocation));
 
             return rootNode;
         }
 
-        private IEnumerable<Vector2> GetAllNeighbors(Level level, Vector2 source)
+        private IEnumerable<Vector2> GetAllNeighbors(Grid<TileType> grid, IMovementCalculator movementCalculator,
+            Vector2 source)
         {
             var neighbors = mDirections.Select(direction =>
-                level.MovementCalculator.CalculateNewLocation(level.LevelGrid, source, direction))
+                movementCalculator.CalculateNewLocation(grid, source, direction))
                 .Where(neighbor => !neighbor.Equals(source)).Distinct()
                 .ToList();
             return neighbors;
+        }
+
+        private IEnumerable<Vector2> GetAllNeighbors(Level level, Vector2 source)
+        {
+            return GetAllNeighbors(level.LevelGrid, level.MovementCalculator, source);
         } 
         
     }
