@@ -21,10 +21,15 @@ namespace BlockSlideCLI
         {
             const string DIRECTORY = "RandomSmallDotFiles";
             var dotFileGenerator = new DotFileGenerator();
-            var level = new Level(1, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
-            dotFileGenerator.GenerateDotFile(level, DIRECTORY);
-            dotFileGenerator.GenerateBatchConvertFile(level, DIRECTORY,
-                @"C:\Users\Talon\SkyDrive\bin\apps\graphviz-2.38\release\bin\");
+            const int COUNT = 50;
+            for (var i = 1; i <= COUNT; i++)
+            {
+                var level = new Level(i, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
+                dotFileGenerator.GenerateDotFile(level, DIRECTORY);
+            }
+            dotFileGenerator.GenerateBatchConvertFile(DIRECTORY,
+                @"C:\Users\Talon\SkyDrive\bin\apps\graphviz-2.38\release\bin\", COUNT);
+
         }
     }
 }

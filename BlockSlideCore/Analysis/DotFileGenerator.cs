@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using BlockSlideCore.DataStructures;
 using BlockSlideCore.Engine;
@@ -22,11 +23,14 @@ namespace BlockSlideCore.Analysis
             Debug.WriteLine("Took {0}ms to create the level graph.", timer.ElapsedMilliseconds);
         }
 
-        public void GenerateBatchConvertFile(Level level, string directory, string dotExePath)
+        public void GenerateBatchConvertFile(string directory, string dotExePath, int maxLevel)
         {
-            var command = string.Format("dot -Tpng Level{0}.dot > Level{0}.png", level.LevelNumber);
+            var command = new StringBuilder();
+            Enumerable.Range(1, maxLevel).ForEach(levelNumber =>
+                command.AppendLine(string.Format(@"{0}\dot -Tpng Level{1}.dot > Level{1}.png",dotExePath, levelNumber)));
+
             File.WriteAllText(string.Format("{0}/convert.bat", directory),
-                string.Format(@"{0}\{1}", dotExePath, command));
+                command.ToString());
         }
 
         private string GenerateDotFileContents(Level level)
