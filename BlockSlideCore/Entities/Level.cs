@@ -93,5 +93,9 @@ namespace BlockSlideCore.Entities
             mLevelGrid.SaveToFile(fileLocation, tile => tile.ToCharacter().ToString());
         }
 
+        public void ResetPlayerLocation()
+        {
+            mPlayer.Location = StartLocation.Clone();
+        }
     }
 }
