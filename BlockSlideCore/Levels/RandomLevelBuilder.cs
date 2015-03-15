@@ -4,7 +4,6 @@ using BlockSlideCore.Analysis;
 using BlockSlideCore.DataStructures;
 using BlockSlideCore.Engine;
 using BlockSlideCore.Entities;
-using BlockSlideCore.Utilities;
 
 namespace BlockSlideCore.Levels
 {
