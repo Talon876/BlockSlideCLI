@@ -42,7 +42,7 @@ namespace BlockSlideCLI
         {
             var stopwatch = new Stopwatch();
             Console.WriteLine("Generating level... please wait");
-            var randomLevelNumber = new Random().Next(5000) + 100;
+            var randomLevelNumber = new Random().Next(100000) + 100;
             stopwatch.Start();
             mLevel = new Level(randomLevelNumber, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
             stopwatch.Stop();
@@ -112,35 +112,31 @@ namespace BlockSlideCLI
         private void DrawTile(int x, int y)
         {
             Console.SetCursorPosition(x, y);
-            char character;
-            switch (mLevel.LevelGrid.Get(x, y))
+            var currentLocation = new Vector2(x, y);
+            var character = mLevel.LevelGrid.Get(currentLocation).ToCharacter();
+
+            switch (mLevel.LevelGrid.Get(currentLocation))
             {
                 case TileType.Floor:
-                    Console.ForegroundColor = mValidLocations.Contains(new Vector2(x, y))
+                    Console.ForegroundColor = mValidLocations.Contains(currentLocation)
                         ? VISITED_COLOR
                         : FLOOR_COLOR;
-                    character = '.';
-                    if (ShowBestPath && mBestPath.Contains(new Vector2(x, y)))
+                    if (ShowBestPath && mBestPath.Contains(currentLocation))
                     {
                         Console.ForegroundColor = PATH_COLOR;
                     }
                     break;
                 case TileType.Wall:
                     Console.ForegroundColor = WALL_COLOR;
-                    character = '#';
                     break;
                 case TileType.Start:
                     Console.ForegroundColor = START_COLOR;
-                    character = '@';
                     break;
                 case TileType.Finish:
                     Console.ForegroundColor = END_COLOR;
-                    character = '$';
-                    break;
-                default:
-                    character = '?';
                     break;
             }
+            
             Console.Write(character);
         }
         
