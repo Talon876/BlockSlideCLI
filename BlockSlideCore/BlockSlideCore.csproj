@@ -62,304 +62,106 @@
     <Compile Include="Utilities\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level1.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level10.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level100.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level11.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level12.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level13.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level14.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level15.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level16.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level17.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level18.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level19.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level2.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level20.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level21.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level22.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level23.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level24.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level25.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level26.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level27.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level28.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level29.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level3.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level30.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level31.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level32.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level33.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level34.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level35.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level36.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level37.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level38.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level39.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level4.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level40.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level41.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level42.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level43.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level44.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level45.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level46.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level47.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level48.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level49.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level5.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level50.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level51.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level52.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level53.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level54.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level55.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level56.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level57.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level58.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level59.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level6.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level60.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level61.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level62.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level63.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level64.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level65.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level66.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level67.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level68.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level69.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level7.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level70.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level71.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level72.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level73.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level74.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level75.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level76.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level77.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level78.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level79.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level8.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level80.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level81.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level82.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level83.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level84.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level85.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level86.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level87.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level88.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level89.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level9.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level90.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level91.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level92.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level93.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level94.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level95.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level96.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level97.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level98.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="GameLevelData\Level99.map" />
+    <EmbeddedResource Include="GameLevelData\Level1.blks" />
+    <EmbeddedResource Include="GameLevelData\Level10.blks" />
+    <EmbeddedResource Include="GameLevelData\Level100.blks" />
+    <EmbeddedResource Include="GameLevelData\Level11.blks" />
+    <EmbeddedResource Include="GameLevelData\Level12.blks" />
+    <EmbeddedResource Include="GameLevelData\Level13.blks" />
+    <EmbeddedResource Include="GameLevelData\Level14.blks" />
+    <EmbeddedResource Include="GameLevelData\Level15.blks" />
+    <EmbeddedResource Include="GameLevelData\Level16.blks" />
+    <EmbeddedResource Include="GameLevelData\Level17.blks" />
+    <EmbeddedResource Include="GameLevelData\Level18.blks" />
+    <EmbeddedResource Include="GameLevelData\Level19.blks" />
+    <EmbeddedResource Include="GameLevelData\Level2.blks" />
+    <EmbeddedResource Include="GameLevelData\Level20.blks" />
+    <EmbeddedResource Include="GameLevelData\Level21.blks" />
+    <EmbeddedResource Include="GameLevelData\Level22.blks" />
+    <EmbeddedResource Include="GameLevelData\Level23.blks" />
+    <EmbeddedResource Include="GameLevelData\Level24.blks" />
+    <EmbeddedResource Include="GameLevelData\Level25.blks" />
+    <EmbeddedResource Include="GameLevelData\Level26.blks" />
+    <EmbeddedResource Include="GameLevelData\Level27.blks" />
+    <EmbeddedResource Include="GameLevelData\Level28.blks" />
+    <EmbeddedResource Include="GameLevelData\Level29.blks" />
+    <EmbeddedResource Include="GameLevelData\Level3.blks" />
+    <EmbeddedResource Include="GameLevelData\Level30.blks" />
+    <EmbeddedResource Include="GameLevelData\Level31.blks" />
+    <EmbeddedResource Include="GameLevelData\Level32.blks" />
+    <EmbeddedResource Include="GameLevelData\Level33.blks" />
+    <EmbeddedResource Include="GameLevelData\Level34.blks" />
+    <EmbeddedResource Include="GameLevelData\Level35.blks" />
+    <EmbeddedResource Include="GameLevelData\Level36.blks" />
+    <EmbeddedResource Include="GameLevelData\Level37.blks" />
+    <EmbeddedResource Include="GameLevelData\Level38.blks" />
+    <EmbeddedResource Include="GameLevelData\Level39.blks" />
+    <EmbeddedResource Include="GameLevelData\Level4.blks" />
+    <EmbeddedResource Include="GameLevelData\Level40.blks" />
+    <EmbeddedResource Include="GameLevelData\Level41.blks" />
+    <EmbeddedResource Include="GameLevelData\Level42.blks" />
+    <EmbeddedResource Include="GameLevelData\Level43.blks" />
+    <EmbeddedResource Include="GameLevelData\Level44.blks" />
+    <EmbeddedResource Include="GameLevelData\Level45.blks" />
+    <EmbeddedResource Include="GameLevelData\Level46.blks" />
+    <EmbeddedResource Include="GameLevelData\Level47.blks" />
+    <EmbeddedResource Include="GameLevelData\Level48.blks" />
+    <EmbeddedResource Include="GameLevelData\Level49.blks" />
+    <EmbeddedResource Include="GameLevelData\Level5.blks" />
+    <EmbeddedResource Include="GameLevelData\Level50.blks" />
+    <EmbeddedResource Include="GameLevelData\Level51.blks" />
+    <EmbeddedResource Include="GameLevelData\Level52.blks" />
+    <EmbeddedResource Include="GameLevelData\Level53.blks" />
+    <EmbeddedResource Include="GameLevelData\Level54.blks" />
+    <EmbeddedResource Include="GameLevelData\Level55.blks" />
+    <EmbeddedResource Include="GameLevelData\Level56.blks" />
+    <EmbeddedResource Include="GameLevelData\Level57.blks" />
+    <EmbeddedResource Include="GameLevelData\Level58.blks" />
+    <EmbeddedResource Include="GameLevelData\Level59.blks" />
+    <EmbeddedResource Include="GameLevelData\Level6.blks" />
+    <EmbeddedResource Include="GameLevelData\Level60.blks" />
+    <EmbeddedResource Include="GameLevelData\Level61.blks" />
+    <EmbeddedResource Include="GameLevelData\Level62.blks" />
+    <EmbeddedResource Include="GameLevelData\Level63.blks" />
+    <EmbeddedResource Include="GameLevelData\Level64.blks" />
+    <EmbeddedResource Include="GameLevelData\Level65.blks" />
+    <EmbeddedResource Include="GameLevelData\Level66.blks" />
+    <EmbeddedResource Include="GameLevelData\Level67.blks" />
+    <EmbeddedResource Include="GameLevelData\Level68.blks" />
+    <EmbeddedResource Include="GameLevelData\Level69.blks" />
+    <EmbeddedResource Include="GameLevelData\Level7.blks" />
+    <EmbeddedResource Include="GameLevelData\Level70.blks" />
+    <EmbeddedResource Include="GameLevelData\Level71.blks" />
+    <EmbeddedResource Include="GameLevelData\Level72.blks" />
+    <EmbeddedResource Include="GameLevelData\Level73.blks" />
+    <EmbeddedResource Include="GameLevelData\Level74.blks" />
+    <EmbeddedResource Include="GameLevelData\Level75.blks" />
+    <EmbeddedResource Include="GameLevelData\Level76.blks" />
+    <EmbeddedResource Include="GameLevelData\Level77.blks" />
+    <EmbeddedResource Include="GameLevelData\Level78.blks" />
+    <EmbeddedResource Include="GameLevelData\Level79.blks" />
+    <EmbeddedResource Include="GameLevelData\Level8.blks" />
+    <EmbeddedResource Include="GameLevelData\Level80.blks" />
+    <EmbeddedResource Include="GameLevelData\Level81.blks" />
+    <EmbeddedResource Include="GameLevelData\Level82.blks" />
+    <EmbeddedResource Include="GameLevelData\Level83.blks" />
+    <EmbeddedResource Include="GameLevelData\Level84.blks" />
+    <EmbeddedResource Include="GameLevelData\Level85.blks" />
+    <EmbeddedResource Include="GameLevelData\Level86.blks" />
+    <EmbeddedResource Include="GameLevelData\Level87.blks" />
+    <EmbeddedResource Include="GameLevelData\Level88.blks" />
+    <EmbeddedResource Include="GameLevelData\Level89.blks" />
+    <EmbeddedResource Include="GameLevelData\Level9.blks" />
+    <EmbeddedResource Include="GameLevelData\Level90.blks" />
+    <EmbeddedResource Include="GameLevelData\Level91.blks" />
+    <EmbeddedResource Include="GameLevelData\Level92.blks" />
+    <EmbeddedResource Include="GameLevelData\Level93.blks" />
+    <EmbeddedResource Include="GameLevelData\Level94.blks" />
+    <EmbeddedResource Include="GameLevelData\Level95.blks" />
+    <EmbeddedResource Include="GameLevelData\Level96.blks" />
+    <EmbeddedResource Include="GameLevelData\Level97.blks" />
+    <EmbeddedResource Include="GameLevelData\Level98.blks" />
+    <EmbeddedResource Include="GameLevelData\Level99.blks" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
