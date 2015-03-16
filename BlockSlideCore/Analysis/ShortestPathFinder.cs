@@ -50,9 +50,5 @@ namespace BlockSlideCore.Analysis
 
             return new ShortestPathData(distance, previous);
         }
-
-        
-
     }
-
 }
