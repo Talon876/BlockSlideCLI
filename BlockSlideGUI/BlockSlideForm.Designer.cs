@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BlockSlideForm));
+            this.levelPanel = new BlockSlideGUI.LevelPanel();
             this.SuspendLayout();
+            // 
+            // levelPanel
+            // 
+            this.levelPanel.BackColor = System.Drawing.Color.White;
+            this.levelPanel.Location = new System.Drawing.Point(0, 0);
+            this.levelPanel.Name = "levelPanel";
+            this.levelPanel.Size = new System.Drawing.Size(576, 320);
+            this.levelPanel.TabIndex = 0;
+            this.levelPanel.TileSize = 32;
             // 
             // BlockSlideForm
             // 
@@ -37,9 +47,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(576, 320);
+            this.Controls.Add(this.levelPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BlockSlideForm";
-            this.Text = "BlockSlide - Level 1";
+            this.Text = "BlockSlide";
             this.ResumeLayout(false);
 
         }
