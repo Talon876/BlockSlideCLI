@@ -81,13 +81,13 @@ namespace BlockSlideGUI
         {
             var playerBodyBrush = new SolidBrush(Color.Yellow);
             graphics.FillEllipse(playerBodyBrush,
-                Level.PlayerLocation.X*TileSize, Level.PlayerLocation.Y*TileSize,
-                (int) (TileSize*.8), (int) (TileSize*.8));
+                Level.PlayerLocation.X*TileSize+4, Level.PlayerLocation.Y*TileSize+4,
+                (int) (TileSize*.75), (int) (TileSize*.75));
             var playerEyeBrush = new Pen(Color.Black);
             graphics.DrawEllipse(playerEyeBrush,
-                Level.PlayerLocation.X*TileSize + 4, Level.PlayerLocation.Y*TileSize + 8, 4, 4);
+                Level.PlayerLocation.X*TileSize + 8, Level.PlayerLocation.Y*TileSize + 12, 4, 4);
             graphics.DrawEllipse(playerEyeBrush,
-                Level.PlayerLocation.X*TileSize + 16, Level.PlayerLocation.Y*TileSize + 8, 4, 4);
+                Level.PlayerLocation.X*TileSize + 19, Level.PlayerLocation.Y*TileSize + 12, 4, 4);
         }
 
         private void LevelPanel_KeyPress(object sender, KeyPressEventArgs e)
