@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
 using BlockSlideCore.Engine;
 using BlockSlideCore.Entities;
 
@@ -9,9 +7,8 @@ namespace BlockSlideCore.Analysis
 {
     public class LevelImageGenerator
     {
-        public void GenerateImage(Level level, int tileSize = 32, bool drawBestPath = true)
+        public Bitmap GenerateImage(Level level, int tileSize = 32, bool drawBestPath = true)
         {
-            Directory.CreateDirectory("ImageMaps");
             var bitmap = new Bitmap(level.LevelGrid.Width*tileSize, level.LevelGrid.Height*tileSize);
             var graphics = Graphics.FromImage(bitmap);
             var brushMap = new Dictionary<TileType, Brush>
@@ -39,7 +36,7 @@ namespace BlockSlideCore.Analysis
                         nextItem.X * tileSize + tileSize / 2, nextItem.Y * tileSize + tileSize / 2);
                 }
             }
-            bitmap.Save(string.Format("{0}/Level{1}.png", "ImageMaps", level.LevelNumber), ImageFormat.Png);
+            return bitmap;
         }
     }
 }
