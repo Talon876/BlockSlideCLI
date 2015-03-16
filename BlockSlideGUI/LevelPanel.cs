@@ -138,6 +138,7 @@ namespace BlockSlideGUI
                 {
                     MessageBox.Show("You win! Resetting to level 1.");
                     mLevelNumber = 1;
+                    SetupLevel();
                 }
                 else
                 {
