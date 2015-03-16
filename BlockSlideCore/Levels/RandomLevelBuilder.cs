@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using BlockSlideCore.Analysis;
 using BlockSlideCore.DataStructures;
 using BlockSlideCore.Engine;
