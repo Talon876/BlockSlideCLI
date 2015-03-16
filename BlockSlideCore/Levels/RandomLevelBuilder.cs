@@ -25,7 +25,7 @@ namespace BlockSlideCore.Levels
         }
 
         public RandomLevelBuilder(int boardWidth, int boardHeight)
-            :this(boardWidth, boardHeight, new MovementCalculator())
+            : this(boardWidth, boardHeight, new MovementCalculator())
         {
         }
 
@@ -40,26 +40,9 @@ namespace BlockSlideCore.Levels
                     grid.Set(x, y, value < 80 ? TileType.Floor : TileType.Wall);
                 }
             }
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
+            var furthestPointFinder = new FurthestPointFinder();
+            var bestStartEndPair = furthestPointFinder.FindFurthestPointPair(grid, mMovementCalculator);
 
-            var graphBuilder = new GraphBuilder();
-            var shortestPathFinder = new ShortestPathFinder();
-            var startEndPairs = new Dictionary<Tuple<Vector2, Vector2>, int>();
-
-            grid.ForEach((x, y, value) =>
-            {
-                var start = new Vector2(x, y);
-                var graphRootNode = graphBuilder.BuildGraph(grid, start.Clone(), mMovementCalculator);
-                var shortestPathData = shortestPathFinder.CalculateShortestPathInformation(graphRootNode, start.Clone());
-                var end = shortestPathData.DistanceMap.OrderByDescending(entry => entry.Value).FirstOrDefault().Key;
-                startEndPairs[new Tuple<Vector2, Vector2>(start, end)] = shortestPathData.DistanceMap[end];
-            });
-
-            var bestStartEndPair = startEndPairs.OrderByDescending(entry => entry.Value).First().Key;
-
-            stopwatch.Stop();
-            Debug.WriteLine("Took {0}ms to select start and end locations.", stopwatch.ElapsedMilliseconds);
             grid.Set(bestStartEndPair.Item1, TileType.Start);
             grid.Set(bestStartEndPair.Item2, TileType.Finish);
             return grid;
