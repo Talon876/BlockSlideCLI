@@ -50,7 +50,7 @@
             this.Controls.Add(this.levelPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BlockSlideForm";
-            this.Text = "BlockSlide";
+            this.Text = "BlockSlide - Level 1";
             this.ResumeLayout(false);
 
         }
