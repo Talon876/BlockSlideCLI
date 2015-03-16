@@ -14,3 +14,11 @@ Generate random levels of any size:
 Automatically finds best paths:
 
 ![random level with best path](http://i.imgur.com/HiSU4qp.png)
+
+Generate image for a level:
+
+![level 55 image](http://i.imgur.com/3LDusiI.png)
+
+Optionally include the shortest path:
+
+![level 55 image solved](http://i.imgur.com/kS4fHuY.png)
