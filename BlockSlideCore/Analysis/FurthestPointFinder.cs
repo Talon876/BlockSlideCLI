@@ -10,12 +10,12 @@ namespace BlockSlideCore.Analysis
 {
     public class FurthestPointFinder
     {
-        public Tuple<Vector2, Vector2> FindFurthestPointPair(Level level)
+        public Tuple<Vector2, Vector2, int> FindFurthestPointPair(Level level)
         {
             return FindFurthestPointPair(level.LevelGrid, level.MovementCalculator);
         }
 
-        public Tuple<Vector2, Vector2> FindFurthestPointPair(Grid<TileType> grid, IMovementCalculator movementCalculator)
+        public Tuple<Vector2, Vector2, int> FindFurthestPointPair(Grid<TileType> grid, IMovementCalculator movementCalculator)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -44,10 +44,9 @@ namespace BlockSlideCore.Analysis
             });
 
             var bestStartEndPair = startEndPairs.OrderByDescending(entry => entry.Value).First().Key;
-
             stopwatch.Stop();
             Debug.WriteLine("Took {0}ms to select start and end locations.", stopwatch.ElapsedMilliseconds);
-            return bestStartEndPair;
+            return new Tuple<Vector2, Vector2, int>(bestStartEndPair.Item1, bestStartEndPair.Item2, startEndPairs[bestStartEndPair]);
         }
     }
 }
