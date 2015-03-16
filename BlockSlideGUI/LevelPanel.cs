@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using BlockSlideCore.Analysis;
 using BlockSlideCore.Engine;
 using BlockSlideCore.Entities;
+using BlockSlideCore.Levels;
 
 namespace BlockSlideGUI
 {
@@ -29,9 +31,13 @@ namespace BlockSlideGUI
         {
             if (ParentForm != null)
             {
-                ParentForm.Text = string.Format("BlockSlide - Level {0}", mLevelNumber);
+                ParentForm.Text = RandomLevelMode
+                    ? "BlockSlide - Random Level"
+                    : string.Format("BlockSlide - Level {0}", mLevelNumber);
             }
-            Level = new Level(mLevelNumber);
+            Level = RandomLevelMode
+                ? new Level(new Random().Next(5000), new RandomLevelBuilder(18, 10))
+                : new Level(mLevelNumber);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -115,6 +121,10 @@ namespace BlockSlideGUI
                 case 'h':
                     ShowBestPath = !ShowBestPath;
                     break;
+                case 'y':
+                    RandomLevelMode = !RandomLevelMode;
+                    SetupLevel();
+                    break;
             }
             GameLoop();
         }
@@ -154,6 +164,8 @@ namespace BlockSlideGUI
                 SetupLevel();
             }
         }
+
+        private bool RandomLevelMode { get; set; }
 
         private bool ShowBestPath { get; set; }
     }
