@@ -33,9 +33,9 @@ namespace BlockSlideCLI
                     character = 'd';
                     break;
             }
-            if (mRandom.Next(1000) < 2)
+            if (mRandom.Next(1300) < 2)
             {
-                character = 'r';
+                character = 'p';
             }
             return character;
         }
