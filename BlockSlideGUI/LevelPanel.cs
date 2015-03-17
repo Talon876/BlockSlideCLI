@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using BlockSlideCore.Analysis;
@@ -19,14 +20,21 @@ namespace BlockSlideGUI
 
         private int mLevelNumber;
 
-        private Bitmap mPlayerSprite;
+        private readonly Bitmap mPlayerSprite;
 
         public LevelPanel()
         {
             InitializeComponent();
             mLevelNumber = 1;
             SetupLevel();
-            mPlayerSprite = new Bitmap("Resources/awesomeface.png");
+            try
+            {
+                mPlayerSprite = new Bitmap("Resources/awesomeface.png");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(string.Format("Failed to load the player sprite: {0}", ex.Message));
+            }
         }
 
         public void SetupLevel()
@@ -81,9 +89,19 @@ namespace BlockSlideGUI
 
         private void DrawPlayer(Graphics graphics)
         {
-            graphics.DrawImage(mPlayerSprite,
-                Level.PlayerLocation.X*TileSize, Level.PlayerLocation.Y*TileSize,
-                TileSize, TileSize);
+            if (mPlayerSprite != null)
+            {
+                graphics.DrawImage(mPlayerSprite,
+                    Level.PlayerLocation.X*TileSize, Level.PlayerLocation.Y*TileSize,
+                    TileSize, TileSize);
+            }
+            else
+            {
+                var playerBodyBrush = new SolidBrush(Color.Yellow);
+                graphics.FillEllipse(playerBodyBrush,
+                    Level.PlayerLocation.X*TileSize, Level.PlayerLocation.Y*TileSize,
+                    TileSize, TileSize);
+            }
         }
 
         private void LevelPanel_KeyPress(object sender, KeyPressEventArgs e)
