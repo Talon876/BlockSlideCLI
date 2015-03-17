@@ -22,7 +22,6 @@ namespace BlockSlideGUI
         public LevelPanel()
         {
             InitializeComponent();
-            TileSize = 32;
             mLevelNumber = 1;
             SetupLevel();
         }

@@ -8,6 +8,7 @@ namespace BlockSlideGUI
         {
             InitializeComponent();
             levelPanel.ParentForm = this;
+            levelPanel.TileSize = 32;
         }
     }
 }
