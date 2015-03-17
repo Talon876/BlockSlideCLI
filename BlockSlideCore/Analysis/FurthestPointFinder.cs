@@ -29,6 +29,8 @@ namespace BlockSlideCore.Analysis
             grid.ForEach((x, y, value) =>
             {
                 var start = new Vector2(x, y);
+                var oldTileType = grid.Get(start);
+                grid.Set(start, TileType.Floor);
                 var graphRootNode = graphBuilder.BuildGraph(grid, start.Clone(), movementCalculator);
                 var shortestPathData = shortestPathFinder.CalculateShortestPathInformation(graphRootNode, start.Clone());
                 var end = shortestPathData.DistanceMap.OrderByDescending(entry => entry.Value).FirstOrDefault().Key;
@@ -41,6 +43,7 @@ namespace BlockSlideCore.Analysis
                     Debug.WriteLine("Checked [{3}/{4}]; Found new best pair: Start/End/Distance found: {0} -> {1} = {2}",
                         start, end, pathDistance, examined, grid.Width * grid.Height);
                 }
+                grid.Set(start, oldTileType);
             });
 
             var bestStartEndPair = startEndPairs.OrderByDescending(entry => entry.Value).First().Key;
