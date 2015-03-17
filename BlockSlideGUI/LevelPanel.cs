@@ -19,11 +19,14 @@ namespace BlockSlideGUI
 
         private int mLevelNumber;
 
+        private Bitmap mPlayerSprite;
+
         public LevelPanel()
         {
             InitializeComponent();
             mLevelNumber = 1;
             SetupLevel();
+            mPlayerSprite = new Bitmap("Resources/awesomeface.png");
         }
 
         public void SetupLevel()
@@ -78,15 +81,9 @@ namespace BlockSlideGUI
 
         private void DrawPlayer(Graphics graphics)
         {
-            var playerBodyBrush = new SolidBrush(Color.Yellow);
-            graphics.FillEllipse(playerBodyBrush,
-                Level.PlayerLocation.X*TileSize+4, Level.PlayerLocation.Y*TileSize+4,
-                (int) (TileSize*.75), (int) (TileSize*.75));
-            var playerEyeBrush = new Pen(Color.Black);
-            graphics.DrawEllipse(playerEyeBrush,
-                Level.PlayerLocation.X*TileSize + 8, Level.PlayerLocation.Y*TileSize + 12, 4, 4);
-            graphics.DrawEllipse(playerEyeBrush,
-                Level.PlayerLocation.X*TileSize + 19, Level.PlayerLocation.Y*TileSize + 12, 4, 4);
+            graphics.DrawImage(mPlayerSprite,
+                Level.PlayerLocation.X*TileSize, Level.PlayerLocation.Y*TileSize,
+                TileSize, TileSize);
         }
 
         private void LevelPanel_KeyPress(object sender, KeyPressEventArgs e)
