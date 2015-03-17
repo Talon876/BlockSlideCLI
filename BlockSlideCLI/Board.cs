@@ -44,7 +44,7 @@ namespace BlockSlideCLI
             Console.WriteLine("Generating level... please wait");
             var randomLevelNumber = new Random().Next(100000) + 100;
             stopwatch.Start();
-            mLevel = new Level(randomLevelNumber, new RandomLevelBuilder(Config.WIDTH, Config.HEIGHT));
+            mLevel = new Level(mLevelNumber, new CampaignLevelBuilder());
             stopwatch.Stop();
             Debug.WriteLine("Took {0}ms (~{1} min) to generate the level.",
                 stopwatch.ElapsedMilliseconds,
