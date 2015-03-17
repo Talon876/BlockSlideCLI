@@ -14,8 +14,7 @@ namespace BlockSlideCore.Levels
             var assembly = Assembly.GetExecutingAssembly();
             var stream = assembly.GetManifestResourceStream(string.Format(LEVEL_RESOURCE, level));
             var streamReader = new StreamReader(stream);
-            var levelData = streamReader.ReadToEnd();
-            levelData.Replace("\r\n", "\n");
+            var levelData = streamReader.ReadToEnd().Replace("\r\n", "\n");
             return levelData.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
     }

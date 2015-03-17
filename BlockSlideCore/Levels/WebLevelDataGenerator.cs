@@ -15,8 +15,9 @@ namespace BlockSlideCore.Levels
             {
                 levelData = webClient.DownloadString(string.Format(LEVEL_RESOURCE, level));
             }
-            levelData.Replace("\r\n", "\n");
-            return levelData.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            return levelData
+                .Replace("\r\n", "\n")
+                .Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
