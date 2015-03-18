@@ -9,6 +9,7 @@ namespace BlockSlideCLI
 
         public BlockSlideCLI()
         {
+            Console.CursorVisible = false;
             keyMappings = new Dictionary<char, Action<Board>>
             {
                 {'r', board => board.SetupLevel()},
